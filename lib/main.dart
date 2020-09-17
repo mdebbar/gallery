@@ -14,9 +14,11 @@ import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/pages/backdrop.dart';
 import 'package:gallery/pages/splash.dart';
 import 'package:gallery/themes/gallery_theme_data.dart';
+import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
 void main() {
   GoogleFonts.config.allowRuntimeFetching = false;
+  configureApp();
   runApp(const GalleryApp());
 }
 
